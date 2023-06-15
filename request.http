@@ -1,0 +1,32 @@
+###
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+    "email":"dinhtanphuoc19@gmail.com",
+    "password":"123456"
+}
+###
+
+GET http://localhost:3000/musics/mp3-player/api
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpbmh0YW5waHVvYzE5QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZPbXVEaFhjbDdJOW1laURiMUJxcS5hWHpFWERYckZ1T2M1cC5oSjAzQlo4dzNRakxremltIiwiaWF0IjoxNjg2ODE4MDE2LCJleHAiOjE2ODY4MTgwNzZ9.F9N5OC0bOvOSshQrgU6UGSIpiG9388LyVo6tp3A-QKw
+
+###
+
+POST http://localhost:3000/user/login/token
+Content-Type: application/json
+
+{
+    "refreshToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpbmh0YW5waHVvYzE5QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZPbXVEaFhjbDdJOW1laURiMUJxcS5hWHpFWERYckZ1T2M1cC5oSjAzQlo4dzNRakxremltIiwiaWF0IjoxNjg2NzA3NTM3LCJleHAiOjE2ODY3MTExMzd9.3_8DUXENCvWv4tOo-k_NwmZqWojIY8ojF92Mgp4Chkk"
+
+}
+###
+
+DELETE http://localhost:3000/user/login/logout
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRpbmh0YW5waHVvYzE5QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJGZPbXVEaFhjbDdJOW1laURiMUJxcS5hWHpFWERYckZ1T2M1cC5oSjAzQlo4dzNRakxremltIiwiaWF0IjoxNjg2NzA4MDQ5LCJleHAiOjE2ODY3MDgwNjl9.oqupLtid48AXQ2MEWsUvXeBg5KvliGD1k7TV0r-pMvI
+
+###
+GET http://localhost:3000/user/login/cookie
+
+###
+GET http://localhost:3000/user/login/getCookie

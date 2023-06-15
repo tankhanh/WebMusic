@@ -1,0 +1,26 @@
+[
+    {
+        "id": 1,
+        "title": "Tạm Biệt Em",
+        "file": "./music/(OFFICIALLY)TAMBIETEM_FULL.mp3",
+        "image": "./image/TAMBIETEM.png"
+    },
+    {
+        "id": 2,
+        "title": "Chợt",
+        "file": "./music/Chot_vocal.mp3",
+        "image": "./image/280706414_547125086895762_8898550536808761002_n.jpg"
+    },
+    {
+        "id": 3,
+        "title": "Lẻ Loi",
+        "file": "./music/Leloi.mp3",
+        "image": "./image/0340624C-6463-4A9B-8110-5B50FAD80048.jpg"
+    },
+    {
+        "id": 4,
+        "title": "Cô Đơn",
+        "file": "./music/CoDon.mp3",
+        "image": "./image/sad.gif"
+    }
+]

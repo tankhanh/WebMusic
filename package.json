@@ -4,7 +4,7 @@
   "description": "First Music Web 2023",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --inspect index.js",
+    "start": "nodemon index.js",
     "watch": "node-sass --watch scss/ --output public/css/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

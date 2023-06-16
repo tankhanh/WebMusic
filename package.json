@@ -1,8 +1,8 @@
 {
-  "name": "musicapp",
+  "name": "musicweb",
   "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
+  "description": "First Music Web 2023",
+  "main": "index.js",
   "scripts": {
     "start": "nodemon --inspect index.js",
     "watch": "node-sass --watch scss/ --output public/css/",

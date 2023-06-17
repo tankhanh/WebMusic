@@ -5,7 +5,7 @@ const verifyToken = (req, res, next) => {
   const refreshToken = req.cookies.refreshToken;
 
   if (!token || !refreshToken) {
-    return res.redirect("/user/login/");
+    return res.redirect("/login/");
     // res.sendStatus(401);
   }
 
@@ -21,12 +21,12 @@ const verifyToken = (req, res, next) => {
       next();
     } else {
       console.log("Token không hợp lệ");
-      return res.redirect("/user/login/");
+      return res.redirect("/login/");
       // res.sendStatus(403);
     }
   } catch (error) {
     console.log(error);
-    return res.redirect("/user/login/");
+    return res.redirect("/login/");
   }
 };
 

@@ -2,7 +2,7 @@ let sing = [];
 let sang = [];
 async function getSongs() {
   try {
-    let data = await axios.get("/musics/mp3-player/api/", {});
+    let data = await axios.get("/mp3-player/api/", {});
     sing = data.data;
     sang = sing.songs;
     console.log(sang);
@@ -24,20 +24,20 @@ async function getSongs() {
     function shuffle() {
       if (isRandom) {
         isRandom = false;
-        playShuffle.style.color = "black";
+        playShuffle.style.color = "white";
       } else {
         isRandom = true;
-        playShuffle.style.color = "#ffb86c";
+        playShuffle.style.color = "#6ca1f0";
       }
     }
     playRepeat.addEventListener("click", repeat);
     function repeat() {
       if (isRepeat) {
         isRepeat = false;
-        playRepeat.style.color = "black";
+        playRepeat.style.color = "white";
       } else {
         isRepeat = true;
-        playRepeat.style.color = "#ff6bcb";
+        playRepeat.style.color = "#6ca1f0";
       }
     }
     let isPlaying = true;
@@ -130,7 +130,7 @@ async function getSongs() {
       song.currentTime = rangeBar.value;
     }
     function init(indexSong) {
-      song.setAttribute("src", `./${sang[indexSong].file}`);
+      song.setAttribute("src", sang[indexSong].file);
       musicImage.setAttribute("src", sang[indexSong].image);
       musicName.textContent = sang[indexSong].title;
     }

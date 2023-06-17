@@ -12,7 +12,7 @@ router.get("/", (req, res) => {
 });
 
 router.get("/getCookie", async (req, res) => {
-  res.redirect("/musics/mp3-player");
+  res.redirect("/mp3-player");
 });
 
 // Create tokens
@@ -56,7 +56,7 @@ router.post("/", async (req, res) => {
         expires: new Date(Date.now() + 1 * 60 * 60 * 1000),
       });
 
-      res.redirect("/user/login/getCookie");
+      res.redirect("/login/getCookie");
     } else {
       res.send("Sai mật khẩu");
     }
@@ -96,7 +96,7 @@ router.delete("/logout", verifyToken, async (req, res) => {
   const check = await loginSchema.findOne({ email: req.UserEmail });
   updateRefreshToken(check.email, null);
   console.log(check);
-  res.redirect("/user/login");
+  res.redirect("/login");
 });
 
 router.get("/logout", async (req, res) => {
@@ -105,7 +105,7 @@ router.get("/logout", async (req, res) => {
   // console.log(check);
   res.clearCookie("token");
   res.clearCookie("refreshToken");
-  res.redirect("/user/login");
+  res.redirect("/login");
 });
 
 module.exports = router;

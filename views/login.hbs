@@ -1,8 +1,19 @@
-<title>Log in </title>
+<title>Sign in </title>
 
 <body>
   <!-- from login -->
   <div class="login">
+    <div class="homepage__header">
+      <nav class="navbar navbar-light bg-light">
+        <div class="container">
+          <a class="navbar-brand" href="/">
+            {{!-- <img src="/img/brand.png" alt="Brand" width="50" height="50"> --}}
+            <ion-icon name="musical-notes-outline" class="musical-notes-outline"></ion-icon>
+            NOR MUSIC
+          </a>
+        </div>
+      </nav>
+    </div>
     <div class="login__container">
       <h1>Login</h1>
       <form action="" method="post" id="form-1">
@@ -21,7 +32,7 @@
         <button type="submit" class="login__signInButton">Login</button>
         {{!-- <input type="button" class="login__signInButton" onclick="handleLogin()" value="Đăng nhập"> --}}
       </form>
-      <span class="login__registerButton">Don't have an account? <a href="/user/signup">Sign up</a></span>
+      <span class="login__registerButton">Don't have an account? <a href="/signup">Sign up</a></span>
     </div>
   </div>
 </body>

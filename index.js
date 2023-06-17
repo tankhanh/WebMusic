@@ -12,6 +12,7 @@ const userSignUpRouter = require("./routes/user/signup");
 const userLogInRouter = require("./routes/user/login");
 const userLogOutRouter = require("./routes/user/login");
 const mp3PlayerRouter = require("./routes/musics/mp3-player");
+const homepageRouter = require("./routes/homepage.js");
 
 // const salt = bcrypt.genSaltSync(saltRounds);
 
@@ -38,10 +39,11 @@ app.use(express.json());
 // app.use(express.json());
 
 // Routes
-app.use("/user/signup", userSignUpRouter);
-app.use("/user/login", userLogInRouter);
-app.use("/user/login/logout", userLogOutRouter);
-app.use("/musics/mp3-player", mp3PlayerRouter);
+app.use("/signup", userSignUpRouter);
+app.use("/login", userLogInRouter);
+app.use("/login/logout", userLogOutRouter);
+app.use("/mp3-player", mp3PlayerRouter);
+app.use("/", homepageRouter);
 
 //path
 app.set("views", path.join(__dirname, "views"));

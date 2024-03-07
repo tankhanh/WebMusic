@@ -1,68 +1,34 @@
-<title>Playlist Norsmither</title>
-<script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-<link rel="stylesheet" href="/css/app.css" />
-<link rel="shortcut icon" href="/img/norsmither.jpg" type="image/x-icon" />
-
-<body onload="getSongs()">
-    <div class="homepage__header">
-      <nav class="navbar navbar-light bg-light">
-        <div class="container">
-          <a class="navbar-brand" href="/">
-            {{!-- <img src="/img/brand.png" alt="Brand" width="50" height="50"> --}}
-            <ion-icon name="musical-notes-outline" class="musical-notes-outline"></ion-icon>
-            NOR MUSIC
-          </a>
-        </div>
-      </nav>
-    </div>
-    <div class="header">
-        {{!-- <a href=""><ion-icon name="log-out-outline" class="logout"></ion-icon><span
-                class="text-logout">Logout</span></a> --}}
-        {{!-- <form action="" method="post" id="logout">
-            <button type="submit" class="logOutButton"><ion-icon name="log-out-outline"></ion-icon>Logout</button>
-        </form> --}}
-        <a href="/login/logout" class="logOutButton">
-            <ion-icon name="log-out-outline"></ion-icon>Logout
-        </a>
-    </div>
-    <div class="music">
-        <div class="music-thumb">
-            <img src="../img/TAMBIETEM.png" alt="Tạm Biệt em" />
-        </div>
-        <h3 class="music-name">Tạm Biệt Em</h3>
-        <input type="range" name="range" id="range" class="range" />
-        <audio src="" id="song"></audio>
-        <div class="timer">
-            <div class="duration">2:10</div>
-            <div class="remaining">-3:10</div>
-        </div>
-        <div class="controls">
-            <ion-icon name="shuffle-outline" class="play-shuffle"></ion-icon>
-            <ion-icon name="play-back-outline" class="play-back"></ion-icon>
-            <div class="play">
-                <div class="player-inner">
-                    <ion-icon name="play-outline" class="play-icon"></ion-icon>
-                </div>
+<div class="container-fluid">
+    <div class="music-player">
+        <span id="loading-message"><strong>Vui lòng chờ giây lát...</strong></span>
+        <div class="song-list mt-4">
+            <button class="btn" data-bs-toggle="collapse" data-bs-target="#songList" aria-expanded="false"
+                aria-controls="songList"><i class="fas fa-list"></i> <strong>Danh sách bài hát</strong></button>
+            <div class="collapse" id="songList">
+                <div class="list-group mt-3"></div>
             </div>
-            <ion-icon name="play-forward-outline" class="play-forward"></ion-icon>
-            <ion-icon name="repeat-outline" class="play-repeat"></ion-icon>
+        </div>
+        <br>
+        <div class="music-info">
+            <img src="../img/TAMBIETEM.png" alt="Tạm Biệt em" class="music-thumbnail" id="thumbnail">
+            <div class="music-details">
+                <h3 class="music-name"><strong>Tạm Biệt Em</strong></h3>
+            </div>
+        </div>
+        <div class="flex-container">
+            <div class="remaining">00:00</div>
+            <input type="range" name="range" id="range" class="range form-range mb-3">
+            <div class="duration">00:00</div>
+        </div>
+        <audio src="" id="song" class="mb-3"></audio>
+        <div class="music-controls">
+            <div class="music-controls">
+                <i class="fas fa-random fa-fw"></i>
+                <i class="fas fa-backward fa-fw"></i>
+                <i class="fas fa-play fa-fw"></i>
+                <i class="fas fa-forward fa-fw"></i>
+                <i class="fas fa-redo-alt fa-fw"></i>
+            </div>
         </div>
     </div>
-    <h2 class="title">SOCIAL</h2>
-    <div class="form-2">
-        <div class="socials">
-            <a href="https://www.facebook.com/iamnorsmither" target="_blank"><ion-icon name="logo-facebook"
-                    class="icon-face"></ion-icon></a>
-            <a href="https://www.instagram.com/norsmither/" target="_blank"><ion-icon name="logo-instagram"
-                    class="icon-ins"></ion-icon></a>
-            <a href="https://www.youtube.com/@norsmither" target="_blank"><ion-icon name="logo-youtube" class="icon-ins"></ion-icon></a>
-        </div>
-    </div>
-</body>
-{{!-- <script src="../musics/mp3-player.js"></script> --}}
-<script src="/mp3Player.js"></script>
-<script src="../login"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"
-    integrity="sha512-uMtXmF28A2Ab/JJO2t/vYhlaa/3ahUOgj1Zf27M5rOo8/+fcTUVH0/E0ll68njmjrLqOBjXM3V9NiPFL5ywWPQ=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</div>

@@ -1,13 +1,12 @@
 const express = require("express");
 const router = express.Router();
-const verifyToken = require("../../middleware/auth");
 const musicSongs = require("../../models/musicSongs");
 
-router.get("/", verifyToken, (req, res) => {
+router.get("/", (req, res) => {
   res.render("mp3-player");
 });
 
-router.get("/api/", verifyToken, async (req, res) => {
+router.get("/api/", async (req, res) => {
   try {
     const songs = await musicSongs.find();
     res.json({ songs });

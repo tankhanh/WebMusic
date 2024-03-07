@@ -6,15 +6,8 @@ const mongoose = require("mongoose");
 const cookieParser = require("cookie-parser");
 const app = express();
 app.use(cookieParser());
-// const bodyParser = require("body-parser");
 
-const userSignUpRouter = require("./routes/user/signup");
-const userLogInRouter = require("./routes/user/login");
-const userLogOutRouter = require("./routes/user/login");
 const mp3PlayerRouter = require("./routes/musics/mp3-player");
-const homepageRouter = require("./routes/homepage.js");
-
-// const salt = bcrypt.genSaltSync(saltRounds);
 
 const url =
   "mongodb+srv://dinhtankhanh14:Khanhdeptrai0408@cluster-norsmither.udr8t5i.mongodb.net/?retryWrites=true&w=majority";
@@ -32,18 +25,11 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.static(path.join(__dirname, "js")));
 app.use(express.static(path.join(__dirname, "validation")));
 app.use(express.static(path.join(__dirname, "routes")));
-// const urlencodedParser = bodyParser.urlencoded({ extended: true });
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(express.urlencoded({ extended: true }));
-// app.use(express.json());
 
 // Routes
-app.use("/signup", userSignUpRouter);
-app.use("/login", userLogInRouter);
-app.use("/login/logout", userLogOutRouter);
-app.use("/mp3-player", mp3PlayerRouter);
-app.use("/", homepageRouter);
+app.use("/", mp3PlayerRouter);
 
 //path
 app.set("views", path.join(__dirname, "views"));
